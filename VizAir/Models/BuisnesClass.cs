@@ -10,8 +10,16 @@ namespace VizAir.Models
 
         public Flight Flight { get; set; }
 
-        public double Price { get; set; }
-    }
+        private double Price { get; set; }
 
-    
+        public string GetPrice()
+        {
+            return $"{Price:##.###}";
+        }
+
+        public double SetPrice
+        {
+            set { Price = value; }
+        }
+    }
 }
